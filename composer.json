@@ -3,8 +3,11 @@
     "description": "Yahoo Weather API PHP Implementation",
     "type": "library",
     "license": "MIT",
+    "version": "1.0.0",
     "minimum-stability": "stable",
-    "require": {},
+    "require": {
+        "php": ">=7.1.0"
+    },
     "autoload": {
         "psr-4": {
             "YahooWeather\\": "src/"
