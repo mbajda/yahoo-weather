@@ -4,6 +4,7 @@
     "type": "library",
     "license": "MIT",
     "version": "1.0.0",
+    "keywords": ["api", "yahoo", "yahoo-weather", "weather"],
     "minimum-stability": "stable",
     "require": {
         "php": ">=7.1.0"
