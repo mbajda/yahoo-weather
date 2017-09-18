@@ -1,0 +1,13 @@
+{
+    "name": "mbajda/yahoo-weather",
+    "description": "Yahoo Weather API PHP Implementation",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "YahooWeather\\": "src/"
+        }
+    }
+}
