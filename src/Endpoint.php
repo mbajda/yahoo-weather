@@ -115,6 +115,15 @@ class Endpoint
     const SCOPE_CONDITIONS = 'item.condition';
 
     /**
+     * Language consts
+     */
+    const LANG_EN = 'en';
+    const LANG_DE = 'de';
+    const LANG_FR = 'fr';
+    const LANG_PL = 'pl';
+    const LANG_ES = 'es';
+
+    /**
      * Cache implementation instance
      * @var CacheInterface
      */
@@ -160,11 +169,12 @@ class Endpoint
     /**
      * Provides WOEIDs based on location's text
      * @param string $location Location string
+     * @param string $lang Result language
      * @return array
      */
-    public function getWOEIDs(string $location): array
+    public function getWOEIDs(string $location, string $lang = self::LANG_EN): array
     {
-        $query = 'select woeid, country.content, admin1.content, locality1.content from geo.places where text="' . $location . '"';
+        $query = 'select woeid, country.content, admin1.content, locality1.content from geo.places where text="' . $location . '" and lang="' . $lang . '"';
         return $this->query($query);
     }
 
